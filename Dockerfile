@@ -1,0 +1,9 @@
+FROM postgres:17
+
+ENV POSTGRES_USER=e_student
+ENV POSTGRES_PASSWORD=my_way
+ENV POSTGRES_DB=std_base
+
+EXPOSE 5432
+
+CMD ["postgres"]
