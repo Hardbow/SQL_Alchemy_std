@@ -11,7 +11,7 @@ async def basic_select_async():
 
 
 def create_tables():
-    metadata_obj.create_all()
+    metadata_obj.create_all(sync_engine)
 
 if __name__ == "__main__":
     asyncio.run(basic_select_async())

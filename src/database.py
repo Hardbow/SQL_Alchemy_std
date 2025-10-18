@@ -7,7 +7,7 @@ import asyncio
 
 sync_engine = create_engine(
     url=settings.DATABASE_URL_psycopg,
-    # echo=True,
+    echo=True,
     # pool_size=5,
     # max_overflow=10
 )
