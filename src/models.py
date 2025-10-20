@@ -1,7 +1,24 @@
+import uuid
+
 from sqlalchemy import Table, Column, Integer, String, UUID, MetaData
+from sqlalchemy.orm import Mapped, mapped_column
+from src.database import Base
+
+
+class WorkersOrm(Base):
+    __tablename__ = "workers"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    id2: Mapped[uuid.UUID] = mapped_column()
+    username: Mapped[str]
+
+
+
+
+
+
 
 metadata_obj = MetaData()
-print(metadata_obj)
+
 
 worker_table = Table(
     "workers",
@@ -11,4 +28,5 @@ worker_table = Table(
     Column("username", String)
 )
 
-print(metadata_obj.info)
+print(dir(metadata_obj))
+print(metadata_obj.tables)
